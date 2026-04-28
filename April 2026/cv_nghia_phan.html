@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nghia PHAN</title>
+    <!-- Intégration de Tailwind CSS pour la mise en page robuste -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Intégration de FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles spécifiques pour l'impression PDF */
+        @media print {
+            body { background-color: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .print-shadow-none { box-shadow: none !important; }
+            .page-break { page-break-inside: avoid; }
+            @page { margin: 0; size: A4; }
+            .main-container { max-width: 100% !important; margin: 0 !important; }
+        }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f4ebd0; /* Couleur parchemin par défaut */
+            background-image: url('fond_cv.jpg'); /* Votre image de fond papyrus */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        /* Rend le conteneur principal légèrement transparent pour laisser apparaître votre fond, sauf à l'impression */
+        @media screen {
+            .main-container { background-color: rgba(255, 255, 255, 0.95); }
+        }
+    </style>
+</head>
+<body class="py-10 print:py-0 text-gray-800">
+
+    <!-- Conteneur principal du CV (Format A4 approximatif) -->
+    <div class="main-container max-w-5xl mx-auto bg-white shadow-2xl print-shadow-none flex flex-col md:flex-row overflow-hidden min-h-screen">
+
+        <!-- COLONNE GAUCHE (Sidebar) -->
+        <aside class="w-full md:w-1/3 bg-slate-800 text-white p-8 flex flex-col gap-8">
+            
+            <!-- Profil / Photo -->
+            <div class="flex flex-col items-center">
+                <!-- Espace pour la photo : Remplacez le src par le chemin de votre photo -->
+                <div class="w-40 h-40 bg-slate-600 rounded-full border-4 border-slate-500 overflow-hidden flex items-center justify-center mb-4">
+                    <img src="photo_profil.jpg" alt="Nghia PHAN" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-3xl font-bold tracking-wider text-center mb-1">Nghia PHAN</h1>
+                <p class="text-slate-400 text-center text-sm font-medium uppercase tracking-widest">Happy Engineers<br>Change the World.</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="page-break">
+                <h2 class="text-xl font-semibold border-b border-slate-600 pb-2 mb-4 uppercase tracking-wider">Contact</h2>
+                <ul class="flex flex-col gap-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope w-5 text-center text-slate-400"></i>
+                        <a href="mailto:nghia.phan31@gmail.com" class="hover:text-white transition">nghia.phan31@gmail.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone w-5 text-center text-slate-400"></i>
+                        <span>+33 637 647 255</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-brands fa-linkedin w-5 text-center text-slate-400"></i>
+                        <a href="https://linkedin.com/in/phannghia/" target="_blank" class="hover:text-white transition">linkedin.com/in/phannghia/</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot w-5 text-center text-slate-400"></i>
+                        <span>Toulouse, France</span>
+                    </li>
+                    <li class="flex items-center gap-3 mt-2">
+                        <i class="fa-solid fa-id-card w-5 text-center text-slate-400"></i>
+                        <span>French citizenship, 55 years old</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hard Skills -->
+            <div class="page-break">
+                <h2 class="text-xl font-semibold border-b border-slate-600 pb-2 mb-4 uppercase tracking-wider">Hard Skills</h2>
+                <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+                    <li>Business Creation and Financing</li>
+                    <li>Hiring and Budgeting</li>
+                    <li>Sourcing and Contracting</li>
+                    <li>Pre-sales Support</li>
+                    <li>Organization/Team Management</li>
+                    <li>New Product Intro. & Industrialization</li>
+                    <li>Regulatory Certification</li>
+                    <li>Manufacturing & Contracted Mfg.</li>
+                    <li>Customer Support</li>
+                    <li>Agile Methodologies & Project Mgmt</li>
+                    <li>Product Mgmt & Lifecycle Mgmt</li>
+                    <li>Risk Management</li>
+                </ul>
+                <h3 class="text-sm font-semibold mt-4 mb-2 text-white">Technical skills:</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-700 px-2 py-1 rounded text-xs">Embedded System</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded text-xs">Internet of Things</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded text-xs">Wireless Telecom.</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded text-xs">Web Platforms</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="page-break">
+                <h2 class="text-xl font-semibold border-b border-slate-600 pb-2 mb-4 uppercase tracking-wider">Soft Skills</h2>
+                <ul class="text-sm text-slate-300 space-y-3">
+                    <li><strong class="text-white block">Adaptability:</strong> Ability to adapt to changes.</li>
+                    <li><strong class="text-white block">Entrepreneurship:</strong> Innovate, convince, take risks, be resilient.</li>
+                    <li><strong class="text-white block">Leadership:</strong> Motivate, coach and guide a team.</li>
+                    <li><strong class="text-white block">Communication:</strong> Effectively communicate with all stakeholders.</li>
+                    <li><strong class="text-white block">Emotional Intelligence:</strong> Understand and manage emotions.</li>
+                    <li><strong class="text-white block">Empathy:</strong> Respond to the needs and perspectives of others.</li>
+                </ul>
+            </div>
+
+            <!-- Languages -->
+            <div class="page-break">
+                <h2 class="text-xl font-semibold border-b border-slate-600 pb-2 mb-4 uppercase tracking-wider">Languages</h2>
+                <ul class="text-sm text-slate-300 space-y-2">
+                    <li class="flex justify-between"><span>French</span> <span class="text-white font-medium">Fluent</span></li>
+                    <li class="flex justify-between"><span>English</span> <span class="text-white font-medium">Fluent</span></li>
+                    <li class="flex justify-between"><span>Vietnamese</span> <span class="text-white font-medium">Fluent</span></li>
+                    <li class="flex justify-between"><span>German</span> <span class="text-slate-400">Basics</span></li>
+                </ul>
+            </div>
+            
+        </aside>
+
+        <!-- COLONNE DROITE (Contenu principal) -->
+        <main class="w-full md:w-2/3 p-8 md:p-12">
+            
+            <!-- Objective -->
+            <section class="mb-10 page-break text-slate-700 leading-relaxed bg-slate-50 p-6 rounded-lg border-l-4 border-blue-600">
+                <p class="font-medium text-lg mb-2">31 years of professional experiences</p>
+                <p>I'm looking for a leadership or senior technical position in an Agile-friendly organization where:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                    <li>I can actively contribute to the company’s goals as well as to its Corporate Social Responsibility.</li>
+                    <li>Ownership, Trust, Inclusiveness, Empathy, Kindness and Harmony are key inspiring values.</li>
+                </ul>
+            </section>
+
+            <!-- Expériences Professionnelles -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 uppercase tracking-wider flex items-center gap-3">
+                    <i class="fa-solid fa-briefcase text-blue-600"></i> Professional Experiences
+                </h2>
+
+                <div class="space-y-8">
+                    <!-- Exp 1 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">CTO</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2017 - 2022</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_ffly4u_uniform.png" alt="ffly4u logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">ffly4u <span class="font-normal text-sm italic">(start-up designing & delivering industrial IOT solutions, France)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            I lead and managed a team of 10 highly motivated engineers to design from ground up, industrialize and deliver IOT solutions to industrial customers (over 30k Edge-AI smart devices deployed in the field). I also managed the sourcing and contracted manufacturing (local/near-shore).<br>
+                            I actively helped the CEO and Sales Director with Product Management, Licensing Model, Financing, Budgeting, Answering to RFI/RFQ.
+                        </p>
+                        
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Co-founder & CTO</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2012 - 2017</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_mobirider_uniform.png" alt="mobi rider logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">mobi rider <span class="font-normal text-sm italic">(start-up providing In-Store CRM solutions, France)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            I actively participated in the creation of the business, in raising a total of 2M€ in equity, 3M€ in debts/subsidies, in hiring a total 15 staffs and in managing relationships with investors and board members.<br>
+                            I hired and lead a team of 10 engineers to design and deliver in-store CRM solutions (over 500 systems) to 10 retailers. I also managed the sourcing and the manufacturing in China. As Inventor, I was granted 5 patents in US and Europe.
+                        </p>
+                    </div>
+
+                    <!-- Exp 3 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Program Manager</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2011 - 2012</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_intel_uniform.png" alt="Intel logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">Intel – Personal Communications Group <span class="font-normal text-sm italic">(France)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            I lead the integration of cellular modems into Intel tablet reference designs, the sourcing and the partnership with Microsoft, Google, Sierra Wireless and Options.
+                        </p>
+                    </div>
+
+                    <!-- Exp 4 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Program Director / Technical Advisor</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2010 - 2011</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_viettel_uniform.png" alt="Viettel logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">Viettel <span class="font-normal text-sm italic">(largest Mobile Operator, Vietnam)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            I lead the design of the 1st 3G Vietnamese smartphone, hired 60 engineers (local and few expats) and managed the partnership with Qualcomm, Mediatek, Foxlink and Pegatron. I also acted as Technical Advisor to the Deputy-CEO.
+                        </p>
+                    </div>
+
+                    <!-- Exp 5 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Founder</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2009 - 2011</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_noema_uniform.png" alt="noema technologies logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">noema technologies <span class="font-normal text-sm italic">(Vietnam)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            Created the business, hired a small team of 3 engineers to develop local mobile payment and strong authentication solutions and drove pilots with eBay, ANZ Bank and Vinagames. I actively participated in the promotion of mobile payment with governmental agencies and the ecosystem.
+                        </p>
+                    </div>
+
+                    <!-- Exp 6 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Software Mgr / Customer Program Mgr</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2002 - 2009</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_freescale_uniform.png" alt="Freescale logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">Freescale Semiconductors <span class="font-normal text-sm italic">(France)</span></h4>
+                        </div>
+                        <ul class="text-sm text-slate-700 leading-relaxed list-none space-y-2">
+                            <li><strong class="text-slate-800">2008-2009:</strong> Lead NPI process for a Symbian smartphone at Samsung. Managed an international multi-disciplinary team to provide on-site support in Suwon, Korea.</li>
+                            <li><strong class="text-slate-800">2002-2008:</strong> Managed up to 70 SW developers globally (France, Canada, Hong-Kong, Romania, India) to deliver SW tools for our 3G platform. Accelerated resource ramp-up via Wipro contracting. Team gained CMM/SEI Level 3 certification.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Exp 7 -->
+                    <div class="page-break relative pl-6 border-l-2 border-slate-300">
+                        <div class="absolute w-3 h-3 bg-slate-400 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Product and Applications Manager</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">1995 - 2002</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_motorola_uniform.png" alt="Motorola logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">Motorola Semiconductors <span class="font-normal text-sm italic">(France)</span></h4>
+                        </div>
+                        <ul class="text-sm text-slate-700 leading-relaxed list-none space-y-2">
+                            <li><strong class="text-slate-800">1997-2002:</strong> Hired and lead a team of 15 engineers (Toulouse, Austin) providing pre-sales technical support to Asia for Chinese mobile OEMs.</li>
+                            <li><strong class="text-slate-800">1995-1997:</strong> Provided customer support to European customers (Germany, Scotland). Responsible for quality and yield at final test (shipped up to 100k GSM chips a week).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Exp 8 -->
+                    <div class="page-break relative pl-6 border-transparent">
+                        <div class="absolute w-3 h-3 bg-slate-300 rounded-full -left-[7px] top-1.5"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h3 class="text-lg font-bold text-slate-800">Telecom Engineer Intern</h3>
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Jul - Oct 1994</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="logo_nttdocomo_uniform.png" alt="NTT DoCoMo logo" class="h-6 w-auto object-contain">
+                            <h4 class="text-md font-semibold text-slate-600">NTT DoCoMo <span class="font-normal text-sm italic">(Japan)</span></h4>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            Developed a Network Management Simulator for the new Intelligent Network 2000 Architecture.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="mb-10 page-break">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 uppercase tracking-wider flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Education
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-slate-800">Scaled Agile Inc. (online) - 2022</h3>
+                        <ul class="text-sm text-slate-700 list-disc list-inside mt-1">
+                            <li>SAFe Agilist Certification</li>
+                            <li>SAFe Product Manager / Product Owner</li>
+                            <li>SAFe Scrum Master Certification</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 flex justify-between">Dale & Carnegie <span class="font-normal text-slate-500 text-sm">2009</span></h3>
+                        <p class="text-sm text-slate-700 mt-1">Toulouse, FR<br>Sales Advantages, High Impact Presentations, Communications and Leadership</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 flex justify-between">Metasysteme <span class="font-normal text-slate-500 text-sm">2006</span></h3>
+                        <p class="text-sm text-slate-700 mt-1">Toulouse, FR<br>Organization Changes and Leadership</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 flex justify-between">INP Grenoble ENSERG <span class="font-normal text-slate-500 text-sm">1992 - 1995</span></h3>
+                        <p class="text-sm text-slate-700 mt-1">Grenoble, FR (now PHELMA)<br>Master Electronic Engineering: Telecom, Project Management, Quality Management</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interests -->
+            <section class="page-break">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 uppercase tracking-wider flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-blue-600"></i> Personal Areas of Interest
+                </h2>
+                
+                <div class="mb-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-bold text-slate-800">Career break to pursue personal goals</h3>
+                        <span class="text-sm font-bold text-blue-600">2022</span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-2">
+                        I enrolled into Les Glénans (French Professional Sailing School) for an intensive professional training and was proudly certified as Sailing Skipper in June 2022. This is was an opportunity to grow and demonstrate my ability to push myself to the limits, my perseverance, to develop effective communication skills as well as building team cohesion skills and to increase boldness and decisiveness while ensuring duty of command of the ship.
+                    </p>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        During this career break, I also dedicated personal quality time to Mindfulness and Meditation, and have significantly deepen my practice skills via several retreats and solo trekkings in Utah & NY, US.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700 mt-6">
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1"><i class="fa-solid fa-person-snowboarding w-5 text-blue-500"></i> Sports & Activities</h4>
+                        <p>Sailing, Kite Surfing, Diving, Alpine Snowboarding, Yoga, Cross-Fit.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1"><i class="fa-solid fa-leaf w-5 text-green-500"></i> Personal Development</h4>
+                        <p>Mindfulness and Meditation (Plum Village Tradition) to develop Emotional Intelligence, Empathy, Deep Listening and Kindness. Nonviolent communication.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="font-bold text-slate-800 mb-1"><i class="fa-solid fa-house-chimney w-5 text-orange-500"></i> Habitat & DIY</h4>
+                        <p>Home Automation, Do-It-Yourself, Low Tech Lab. Passive Autonomous Homes, Earthships.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

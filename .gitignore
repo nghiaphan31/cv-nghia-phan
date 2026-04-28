@@ -1,0 +1,52 @@
+# GitHub GitIgnore Template for Python + Web Development
+
+# Environment and IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Google Gemini downloaded files (these contain temporary/downloaded content)
+"CV Restructuration et Modification Facile - Google Gemini_files/"
+
+# Original logos source folder (processed files are in parent)
+"April 2026/original logos/"
+
+# Mars 2023 - older CV version (keep if needed, remove if not)
+Mars 2023/
+
+# Images that are processed outputs (keep normalized versions only)
+*.téléchargement
+*.png.bak
+*.jpg.bak
+
+# Temporary files
+*.tmp
+*.temp
