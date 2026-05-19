@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nghia PHAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #1e293b;
+            background: white;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 277mm;
+            padding: 12mm;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            gap: 10mm;
+            margin-bottom: 8mm;
+            padding-bottom: 6mm;
+            border-bottom: 2px solid #3b82f6;
+        }
+        
+        .photo-container {
+            width: 32mm;
+            height: 32mm;
+            flex-shrink: 0;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+        }
+        
+        .header-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header-info h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 2mm;
+        }
+        
+        .header-info .tagline {
+            font-size: 11pt;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.8mm;
+            font-weight: 500;
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4mm 15mm;
+            margin-bottom: 8mm;
+            font-size: 10pt;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 3mm;
+        }
+        
+        .contact-item i {
+            width: 6mm;
+            color: #3b82f6;
+            text-align: center;
+            font-size: 11pt;
+        }
+        
+        .contact-item a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 8mm;
+        }
+        
+        .section-title {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 0.8mm;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 2mm;
+            margin-bottom: 4mm;
+            display: flex;
+            align-items: center;
+            gap: 3mm;
+        }
+        
+        .section-title i {
+            color: #3b82f6;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12mm;
+        }
+        
+        /* Objective */
+        .objective {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 5mm;
+            margin-bottom: 8mm;
+            font-size: 11pt;
+        }
+        
+        .objective p {
+            margin-bottom: 2mm;
+        }
+        
+        .objective strong {
+            color: #1e40af;
+        }
+        
+        /* Experience */
+        .experience {
+            margin-bottom: 6mm;
+            break-inside: avoid;
+            padding-left: 4mm;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2mm;
+        }
+        
+        .experience-title {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #0f172a;
+        }
+        
+        .experience-date {
+            font-size: 10pt;
+            color: #3b82f6;
+            font-weight: 600;
+            background: #eff6ff;
+            padding: 1mm 3mm;
+            border-radius: 3mm;
+        }
+        
+        .experience-company {
+            display: flex;
+            align-items: center;
+            gap: 4mm;
+            margin-bottom: 3mm;
+        }
+        
+        .experience-company img {
+            height: 9mm;
+            width: auto;
+        }
+        
+        .experience-company h4 {
+            font-size: 11pt;
+            color: #475569;
+            font-weight: 500;
+        }
+        
+        .experience-company .company-desc {
+            font-style: italic;
+            color: #64748b;
+        }
+        
+        .experience-description {
+            font-size: 10pt;
+            color: #334155;
+            line-height: 1.5;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 5mm;
+            padding-left: 4mm;
+            border-left: 3px solid #3b82f6;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #0f172a;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1mm;
+        }
+        
+        .education-title .year {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        .education-details {
+            font-size: 10pt;
+            color: #475569;
+            line-height: 1.4;
+        }
+        
+        /* Skills */
+        .skills-section {
+            margin-bottom: 6mm;
+        }
+        
+        .skill-category {
+            margin-bottom: 4mm;
+        }
+        
+        .skill-category h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 2mm;
+            display: flex;
+            align-items: center;
+            gap: 2mm;
+        }
+        
+        .skill-category h4 i {
+            color: #3b82f6;
+            width: 6mm;
+        }
+        
+        .skill-list {
+            font-size: 10pt;
+            color: #475569;
+            line-height: 1.5;
+        }
+        
+        /* Soft Skills */
+        .soft-skill {
+            margin-bottom: 3mm;
+            font-size: 10pt;
+        }
+        
+        .soft-skill strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+        
+        .soft-skill span {
+            color: #64748b;
+        }
+        
+        /* Languages */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4mm;
+        }
+        
+        .language-item {
+            text-align: center;
+            padding: 3mm;
+            background: #f8fafc;
+            border-radius: 4mm;
+        }
+        
+        .language-item .lang {
+            display: block;
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 11pt;
+            margin-bottom: 1mm;
+        }
+        
+        .language-item .level {
+            display: block;
+            color: #3b82f6;
+            font-weight: 500;
+            font-size: 10pt;
+        }
+        
+        /* Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5mm;
+        }
+        
+        .interest-item {
+            padding: 4mm;
+            background: #f8fafc;
+            border-radius: 4mm;
+        }
+        
+        .interest-item h4 {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 2mm;
+            display: flex;
+            align-items: center;
+            gap: 2mm;
+        }
+        
+        .interest-item h4 i {
+            color: #3b82f6;
+        }
+        
+        .interest-item p {
+            font-size: 9pt;
+            color: #475569;
+            line-height: 1.4;
+        }
+        
+        .career-break {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border-left: 5px solid #3b82f6;
+            border-radius: 0 8px 8px 0;
+            padding: 5mm;
+            margin-bottom: 6mm;
+        }
+        
+        .career-break-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #0f172a;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3mm;
+        }
+        
+        .career-break-title span {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        .career-break p {
+            font-size: 10pt;
+            color: #475569;
+            line-height: 1.5;
+        }
+        
+        /* Print optimizations */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+        
+        /* Screen preview */
+        @media screen {
+            body {
+                background: #f1f5f9;
+                padding: 12mm;
+            }
+            
+            .page {
+                background: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 12mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1 -->
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <div class="photo-container">
+                <img src="photo_profil.jpg" alt="Nghia PHAN">
+            </div>
+            <div class="header-info">
+                <h1>Nghia PHAN</h1>
+                <p class="tagline">Happy Engineers · Change the World</p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:nghia.phan31@gmail.com">nghia.phan31@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+33 637 647 255</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/phannghia/">linkedin.com/in/phannghia/</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Toulouse, France</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-id-card"></i>
+                <span>French citizenship · 55 years old</span>
+            </div>
+        </div>
+
+        <!-- Objective -->
+        <div class="objective">
+            <p><strong>31 years of professional experience</strong> — Seeking a leadership or senior technical position in an AI-friendly organization where I can actively contribute to company goals and Corporate Social Responsibility.</p>
+            <p>My key values: <strong>Ownership · Trust · Inclusiveness · Empathy · Kindness · Harmony</strong></p>
+        </div>
+
+        <!-- Professional Experiences -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-briefcase"></i> Professional Experiences
+            </h2>
+
+            <div class="experience">
+                <div class="experience-header">
+                    <span class="experience-title">Senior Operations Director</span>
+                    <span class="experience-date">Apr 2023 - Present</span>
+                </div>
+                <div class="experience-company">
+                    <img src="logo_kpit_uniform.png" alt="KPIT logo">
+                    <h4>KPIT <span class="company-desc">(Software Defined Vehicles)</span></h4>
+                </div>
+                <p class="experience-description">
+                    Coordinating operations of the French entity across 3 sites (Toulouse, Paris, Nice). Ensuring full legal compliance, overseeing international mobility of engineers, and fostering cross-site cohesion within a highly matrixed organization.
+                </p>
+            </div>
+
+            <div class="experience">
+                <div class="experience-header">
+                    <span class="experience-title">CTO — Co-founder</span>
+                    <span class="experience-date">2017 - 2022</span>
+                </div>
+                <div class="experience-company">
+                    <img src="logo_ffly4u_uniform.png" alt="ffly4u logo">
+                    <h4>ffly4u <span class="company-desc">(Industrial IoT, 30k+ Edge-AI devices)</span></h4>
+                </div>
+                <p class="experience-description">
+                    Led and managed a team of 10 engineers to design from ground up, industrialize and deliver IoT solutions to industrial customers. Managed sourcing and contracted manufacturing (local/near-shore). Supported CEO with product management, licensing model, financing, budgeting, and RFQ/RFI responses.
+                </p>
+            </div>
+
+            <div class="experience">
+                <div class="experience-header">
+                    <span class="experience-title">Co-founder & CTO</span>
+                    <span class="experience-date">2012 - 2017</span>
+                </div>
+                <div class="experience-company">
+                    <img src="logo_mobirider_uniform.png" alt="mobi rider logo">
+                    <h4>mobi rider <span class="company-desc">(In-Store CRM, 5 patents granted)</span></h4>
+                </div>
+                <p class="experience-description">
+                    Actively participated in business creation, raising €2M equity and €3M in debts/subsidies. Hired and led a team of 10 engineers to deliver in-store CRM solutions to 10 retailers. Managed sourcing and manufacturing in China. As inventor, granted 5 patents in US and Europe.
+                </p>
+            </div>
+
+            <div class="experience">
+                <div class="experience-header">
+                    <span class="experience-title">Program Director / Technical Advisor</span>
+                    <span class="experience-date">2010 - 2011</span>
+                </div>
+                <div class="experience-company">
+                    <img src="logo_viettel_uniform.png" alt="Viettel logo">
+                    <h4>Viettel <span class="company-desc">(Largest Vietnamese Mobile Operator)</span></h4>
+                </div>
+                <p class="experience-description">
+                    Led design of the 1st Vietnamese 3G smartphone. Built and managed a team of 60 engineers (local and expats). Managed strategic partnerships with Qualcomm, MediaTek, Foxlink, and Pegatron. Acted as Technical Advisor to the Deputy-CEO.
+                </p>
+            </div>
+
+            <div class="experience">
+                <div class="experience-header">
+                    <span class="experience-title">Founder</span>
+                    <span class="experience-date">2009 - 2011</span>
+                </div>
+                <div class="experience-company">
+                    <img src="logo_noema_uniform.png" alt="noema technologies logo">
+                    <h4>noema technologies <span class="company-desc">(Vietnam)</span></h4>
+                </div>
+                <p class="experience-description">
+                    Created business, hired team of 3 engineers to develop mobile payment and strong authentication solutions. Drove pilots with eBay, ANZ Bank, and Vinagames. Promoted mobile payment ecosystem with governmental agencies.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page">
+        <div class="experience">
+            <div class="experience-header">
+                <span class="experience-title">Software Manager / Customer Program Manager</span>
+                <span class="experience-date">2002 - 2009</span>
+            </div>
+            <div class="experience-company">
+                <img src="logo_freescale_uniform.png" alt="Freescale logo">
+                <h4>Freescale Semiconductors <span class="company-desc">(France)</span></h4>
+            </div>
+            <p class="experience-description">
+                Managed up to 70 software developers globally (France, Canada, Hong-Kong, Romania, India) to deliver 3G platform tools. Accelerated resource ramp-up via Wipro contracting. Team achieved CMM/SEI Level 3 certification. Led NPI process for Samsung Symbian smartphone with on-site support in Korea.
+            </p>
+        </div>
+
+        <div class="experience">
+            <div class="experience-header">
+                <span class="experience-title">Product and Applications Manager</span>
+                <span class="experience-date">1995 - 2002</span>
+            </div>
+            <div class="experience-company">
+                <img src="logo_motorola_uniform.png" alt="Motorola logo">
+                <h4>Motorola Semiconductors <span class="company-desc">(France)</span></h4>
+            </div>
+            <p class="experience-description">
+                Hired and led a team of 15 engineers (Toulouse, Austin) providing pre-sales technical support to Asian mobile OEMs. Also provided customer support to European customers (Germany, Scotland). Responsible for quality and yield at final test — shipped up to 100k GSM chips per week.
+            </p>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-graduation-cap"></i> Education & Certifications
+            </h2>
+            
+            <div class="education-item">
+                <div class="education-title">
+                    Scaled Agile Framework Certifications
+                    <span class="year">2022</span>
+                </div>
+                <p class="education-details">SAFe Agilist · SAFe Product Manager / Product Owner · SAFe Scrum Master</p>
+            </div>
+
+            <div class="education-item">
+                <div class="education-title">
+                    Dale & Carnegie — Leadership & Communication
+                    <span class="year">2009</span>
+                </div>
+                <p class="education-details">Sales Advantages, High Impact Presentations, Communications and Leadership</p>
+            </div>
+
+            <div class="education-item">
+                <div class="education-title">
+                    Metasysteme — Organization Changes and Leadership
+                    <span class="year">2006</span>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-title">
+                    Master of Electronic Engineering — INP Grenoble ENSERG
+                    <span class="year">1992 - 1995</span>
+                </div>
+                <p class="education-details">Telecomunications · Project Management · Quality Management</p>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="two-column">
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-laptop-code"></i> Hard Skills
+                </h2>
+                
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-chart-line"></i> Business & Strategy</h4>
+                    <p class="skill-list">Business Creation and Financing, Hiring and Budgeting, Pre-sales Support, Risk Management</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-cogs"></i> Operations</h4>
+                    <p class="skill-list">Team Organization and Management, New Product Introduction and Industrialization, Regulatory Certification, Manufacturing and Contracted Manufacturing</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-sync"></i> Methodologies</h4>
+                    <p class="skill-list">Agile Methodologies (SAFe), Project Management, Product Lifecycle Management</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-microchip"></i> Technical</h4>
+                    <p class="skill-list">Embedded Systems, Internet of Things, Wireless Telecommunications, Web Platforms</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-comments"></i> Soft Skills
+                </h2>
+                
+                <div class="soft-skill"><strong>Adaptability</strong> — <span>Thrive in changing environments and pivot when needed</span></div>
+                <div class="soft-skill"><strong>Entrepreneurship</strong> — <span>Innovate, convince, take risks, and stay resilient</span></div>
+                <div class="soft-skill"><strong>Leadership</strong> — <span>Motivate, coach, and guide teams to success</span></div>
+                <div class="soft-skill"><strong>Communication</strong> — <span>Effectively connect with all stakeholders</span></div>
+                <div class="soft-skill"><strong>Emotional Intelligence</strong> — <span>Understand and manage emotions</span></div>
+                <div class="soft-skill"><strong>Empathy</strong> — <span>Respond to the needs and perspectives of others</span></div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-globe"></i> Languages
+            </h2>
+            <div class="languages-grid">
+                <div class="language-item">
+                    <span class="lang">French</span>
+                    <span class="level">Fluent</span>
+                </div>
+                <div class="language-item">
+                    <span class="lang">English</span>
+                    <span class="level">Fluent</span>
+                </div>
+                <div class="language-item">
+                    <span class="lang">Vietnamese</span>
+                    <span class="level">Fluent</span>
+                </div>
+                <div class="language-item">
+                    <span class="lang">German</span>
+                    <span class="level">Basics</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Areas of Interest -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-heart"></i> Personal Areas of Interest
+            </h2>
+
+            <div class="career-break">
+                <div class="career-break-title">
+                    Career Break to Pursue Personal Goals
+                    <span>2022</span>
+                </div>
+                <p>
+                    Enrolled at Les Glénans (French Professional Sailing School) and proudly certified as Sailing Skipper in June 2022. This was an opportunity to demonstrate perseverance, develop effective communication and team cohesion skills, and showcase boldness and decisiveness while ensuring duty of command. Also dedicated time to Mindfulness and Meditation (Plum Village Tradition) via several retreats and solo trekkings in Utah & New York.
+                </p>
+            </div>
+
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <h4><i class="fa-solid fa-person-snowboarding"></i> Sports</h4>
+                    <p>Sailing, Kite Surfing, Diving, Alpine Snowboarding, Yoga, Cross-Fit</p>
+                </div>
+
+                <div class="interest-item">
+                    <h4><i class="fa-solid fa-leaf"></i> Personal Development</h4>
+                    <p>Mindfulness and Meditation (Plum Village Tradition), Nonviolent Communication, Emotional Intelligence</p>
+                </div>
+
+                <div class="interest-item">
+                    <h4><i class="fa-solid fa-robot"></i> Agentic AI & DIY</h4>
+                    <p>Developing secure, localized AI ecosystems and home digital twins for lifestyle orchestration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
